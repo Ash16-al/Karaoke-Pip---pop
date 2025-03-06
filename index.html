@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1> BIENVENIDOS AL KARAOKE PIP & POP</h1>
- 
+<body class="bg-purple-400 flex flex-col items-center" >
+
+    <div class="text-center mt-6">
+        <img src="https://th.bing.com/th/id/OIP.OKEqPjfmC6BG_6xJ3TRS8gAAAA?rs=1&pid=ImgDetMain" alt="Micrófono Karaoke" class="w-24 mx-auto rounded-lg shadow-lg border-4 border-amber-600">
+        <h1 class="text-purple-800 font-serif p-2 text-3xl mt-2 font-bold">BIENVENIDOS AL KARAOKE PIP & POP</h1>
+        <div class="flex justify-center mt-4">
+            <img src="https://i.pinimg.com/originals/ec/36/b9/ec36b9cf792cb36e9d13769cf6bb4831.jpg" alt="Pip & Pop" class="w-48 h-48 object-cover rounded-lg shadow-lg border-4 border-amber-600">
+        </div>
+    </div>
+
+
+
     <!--Formulario para agregar canciones-->
-<form id="song_form">
-    <label for="song_name">Nombre de la canción</label>
-    <input id="song_name" type="text" required>
-    <label for="artist_name">Nombre del Artista</label>
-    <input id="artist_name" type="text" required>
-    <label for="url_song">Ingresa el enlace de la canción</label>
-    <input id="url_song" type="url" required>
+    <form id="song_form" class="mt-4 bg-amber-200 p-6 rounded-lg shadow-lg w-80">
+        <label for="song_name" class="block text-sm font-medium text-gray-700">Nombre de la canción</label>
+        <input id="song_name" class="rounded-md w-full p-2 border" type="text" required>
 
-    <button type="submit">Agregar a la lista canción</button>
-</form>
+        <label for="artist_name" class="block text-sm font-medium text-gray-700">Nombre del artista</label>
+        <input id="artist_name" class="rounded-md w-full p-2 border" type="text" required>
 
-    <!-- Lista de canciones agregadas -->
-     <h2>Lista de reproducción</h2>
-     <ul id="play_list"></ul>
+        <label for="url_song" class="block text-sm font-medium text-gray-700">Ingresa el enlace de la canción</label>
+        <input id="url_song" class="rounded-md w-full p-2 border" type="text" required>
+
+        <button class="block bg-amber-700 text-white text-lg mt-4 p-2 rounded-md w-full hover:bg-amber-600" type="submit">Agregar a la lista</button>
+        </form>
+
+        <!-- Lista de canciones agregadas -->
+        <h2 class="mt-6 text-2xl font-semibold text-amber-950">Lista de reproducción</h2>
+        <ul id="play_list" class="mt-2 w-80  bg-amber-200 p-4 rounded-lg shadow-lg"></ul>
+
+        <script src="main.js"></script>
 
 </body>
-
-<script src="main.js"></script>
-</html>  
+</html>

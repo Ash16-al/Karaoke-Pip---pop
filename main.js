@@ -5,16 +5,22 @@ const playList = document.getElementById('play_list');
 
 //Función para agregar una canción a la lista
 function addSong(songName, artistName, songUrl){
-    const listSong =  document.createElement('li');
-    listSong.innerHTML = `
+    const listItem =  document.createElement('li');
+    listItem.innerHTML = `
             <strong> ${songName}</strong>
             - ${artistName}
             <a href="${songUrl}" target="_blank" >Reproducir</a>
-            <button class="delete-btn">Eliminar</button>
+            <button class="delete-btn bg-amber-500 text-amber-900 rounded-md">Eliminar</button>
     `;
 
     //Agregar al HTML
-    playList.appendChild(listSong);
+    playList.appendChild(listItem);
+
+     //agregar evento de la canción
+const deleteButton = listItem.querySelector (`.delete-btn`);
+deleteButton.addEventListener("click", ()=>{
+    listItem.remove();
+});
 
 }
 
